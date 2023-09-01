@@ -7,7 +7,7 @@ export default function RightBar() {
       className="right-bar  overflow-auto bg-fixed bg-cover bg-no-repeat bg-center col-span-10 md:col-span-2 h-[100vh]"
       style={{ backgroundImage: `url(./images/introC.jpg)` }}
     >
-      <div className="flex flex-col justify-center items-center text-white gap-4 md:mt-[320px] mt-60  text-center ">
+      <div className="flex flex-col justify-center items-center text-white gap-4 md:mt-[320px] mt-64  text-center ">
         <h1 className="text-3xl font-medium md:text-4xl ">Welcome</h1>
         <h1 className="text-5xl md:text-7xl font-semibold">
           <Typewriter
