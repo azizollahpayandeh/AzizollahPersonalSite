@@ -20,13 +20,13 @@ export default function LeftBar() {
   const [showMenu, setShowMenu] = useState(false);
 
   const menuItems = [
-    { text: "Home", link: "#", className:'text-green-500 ' },
-    { text: "About me", link: "#", className: 'hover:text-green-300' },
-    { text: "What I Do", link: "#", className: 'hover:text-green-300' },
-    { text: "Resume", link: "#", className: 'hover:text-green-300' },
-    { text: "Profilo", link: "#", className: 'hover:text-green-300' },
-    { text: "Testimonial", link: "#", className: 'hover:text-green-300' },
-    { text: "Contact", link: "#", className: 'hover:text-green-300' },
+    { text: "Home", link: "#", className:'text-green-500 font-medium ' },
+    { text: "About me", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "What I Do", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "Resume", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "Profilo", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "Testimonial", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "Contact", link: "#", className: 'hover:text-green-300 font-medium' },
   ];
 
   useEffect(() => {
@@ -49,8 +49,8 @@ export default function LeftBar() {
     return (
       <div className="fixed  top-0 left-0 w-full bg-[#161616] text-white p-4">
       <div className="flex justify-between items-center">
-        <h1 className=" font-semibold">{name}</h1>
-        <div className="flex gap-1  p-[1px]">
+        <h1 className=" font-bold">{name}</h1>
+        <div className="flex gap-3  p-[1px] -mr-20">
           {socialIcons.map((item, index) => (
             <div key={index} className={item.className}>
               {item.icon}
@@ -95,25 +95,25 @@ export default function LeftBar() {
       </div>
       <div className="list-none flex  flex-col items-center gap-5 mt-[140px] font-medium opacity-90">
         <a href="#">
-          <li className="text-green-500 hover:bg-green-500">Home</li>
+          <li className="text-green-500 hover:bg-green-500 font-semibold">Home</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">About me</li>
+          <li className="hover:text-green-500 font-semibold">About me</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">What I Do</li>
+          <li className="hover:text-green-500 font-semibold">What I Do</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">Resume</li>
+          <li className="hover:text-green-500 font-semibold">Resume</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">Profilo</li>
+          <li className="hover:text-green-500 font-semibold">Profilo</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">Testimonial</li>
+          <li className="hover:text-green-500 font-semibold">Testimonial</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500">Contact</li>
+          <li className="hover:text-green-500 font-semibold">Contact</li>
         </a>
       </div>
       <div className="flex justify-center items-end gap-3 opacity-50 mt-[220px] ">
