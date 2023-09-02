@@ -9,7 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const name = "Azizollah Payandeh";
 
 const socialIcons = [
-  { icon: <FacebookOutlinedIcon />, className: "p-[1px] cursor-pointer" },
+  { icon: <FacebookOutlinedIcon className="hover:bg-blue-500" />, className: "p-[1px] cursor-pointer" },
   { icon: <TwitterIcon />, className: "p-[1px]  cursor-pointer" },
   { icon: <LanguageIcon />, className: "p-[1px]  cursor-pointer" },
   { icon: <GitHubIcon />, className: "p-[1px]  cursor-pointer" },
@@ -20,13 +20,13 @@ export default function LeftBar() {
   const [showMenu, setShowMenu] = useState(false);
 
   const menuItems = [
-    { text: "Home", link: "#", className:'text-green-500 font-medium ' },
-    { text: "About me", link: "#", className: 'hover:text-green-300 font-medium' },
-    { text: "What I Do", link: "#", className: 'hover:text-green-300 font-medium' },
-    { text: "Resume", link: "#", className: 'hover:text-green-300 font-medium' },
-    { text: "Profilo", link: "#", className: 'hover:text-green-300 font-medium' },
-    { text: "Testimonial", link: "#", className: 'hover:text-green-300 font-medium' },
-    { text: "Contact", link: "#", className: 'hover:text-green-300 font-medium' },
+    { text: "Home", link: "#", className:'text-green-500 font-medium  text-xl ' },
+    { text: "About me", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
+    { text: "What I Do", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
+    { text: "Resume", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
+    { text: "Profilo", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
+    { text: "Testimonial", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
+    { text: "Contact", link: "#", className: 'hover:text-green-300 font-medium text-xl ' },
   ];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function LeftBar() {
 
   if (!showLeftBar) {
     return (
-      <div className="fixed  top-0 left-0 w-full bg-[#161616] text-white p-4">
+      <div className="fixed  top-0 left-0 w-full bg-[#191C1B]  text-white p-4">
       <div className="flex justify-between items-center">
         <h1 className=" font-bold">{name}</h1>
         <div className="flex gap-3  p-[1px] -mr-20">
