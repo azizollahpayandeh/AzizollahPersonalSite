@@ -6,6 +6,8 @@ import LanguageIcon from "@mui/icons-material/Language";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+const name = "Azizollah Payandeh";
+
 const socialIcons = [
   { icon: <FacebookOutlinedIcon />, className: "p-[1px] cursor-pointer" },
   { icon: <TwitterIcon />, className: "p-[1px]  cursor-pointer" },
@@ -18,13 +20,13 @@ export default function LeftBar() {
   const [showMenu, setShowMenu] = useState(false);
 
   const menuItems = [
-    { text: "Home", link: "#" },
-    { text: "About me", link: "#" },
-    { text: "What I Do", link: "#" },
-    { text: "Resume", link: "#" },
-    { text: "Profilo", link: "#" },
-    { text: "Testimonial", link: "#" },
-    { text: "Contact", link: "#" },
+    { text: "Home", link: "#", className:'text-green-500 ' },
+    { text: "About me", link: "#", className: 'hover:text-green-300' },
+    { text: "What I Do", link: "#", className: 'hover:text-green-300' },
+    { text: "Resume", link: "#", className: 'hover:text-green-300' },
+    { text: "Profilo", link: "#", className: 'hover:text-green-300' },
+    { text: "Testimonial", link: "#", className: 'hover:text-green-300' },
+    { text: "Contact", link: "#", className: 'hover:text-green-300' },
   ];
 
   useEffect(() => {
@@ -45,9 +47,10 @@ export default function LeftBar() {
 
   if (!showLeftBar) {
     return (
-      <div className="fixed top-0 left-0 w-full bg-[#161616] text-white p-4">
+      <div className="fixed  top-0 left-0 w-full bg-[#161616] text-white p-4">
       <div className="flex justify-between items-center">
-        <div className="flex gap-3 p-[2px]">
+        <h1 className=" font-semibold">{name}</h1>
+        <div className="flex gap-1  p-[1px]">
           {socialIcons.map((item, index) => (
             <div key={index} className={item.className}>
               {item.icon}
@@ -61,11 +64,12 @@ export default function LeftBar() {
           {showMenu ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
-      {showMenu && (
-        <ul className="md:hidden">
+      {showMenu && ( 
+        <ul className="md:hidden mt-7">
           {menuItems.map((item, index) => (
-            <li key={index}>
-              <a href={item.link}>{item.text}</a>
+            <li key={index} className="mt-2">
+              <a href={item.link} className={item.className}>{item.text}</a>
+              <hr className="opacity-50 " />
             </li>
           ))}
         </ul>
@@ -76,7 +80,6 @@ export default function LeftBar() {
     )
   }
 
-  const name = "Azizollah Payandeh";
   const profileImageSrc = "./images/mee.jpg";
 
   return (
@@ -90,7 +93,7 @@ export default function LeftBar() {
         />
         <h1 className="text-lg font-semibold mt-3 opacity-90">{name}</h1>
       </div>
-      <div className="list-none flex flex-col items-center gap-5 mt-[130px] font-medium opacity-90">
+      <div className="list-none flex  flex-col items-center gap-5 mt-[140px] font-medium opacity-90">
         <a href="#">
           <li className="text-green-500 hover:bg-green-500">Home</li>
         </a>
