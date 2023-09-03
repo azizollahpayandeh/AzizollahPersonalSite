@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 export default function RightBar() {
   return (
-    <div className="w-[83%] float-right">
+    <div className="xl:w-[83%] w-[100%] float-right">
         <div
       className="right-bar  overflow-auto bg-fixed bg-cover bg-no-repeat bg-center col-span-10 md:col-span-2 h-[100vh]  "
       style={{ backgroundImage: `url(./images/introC.jpg)` }}

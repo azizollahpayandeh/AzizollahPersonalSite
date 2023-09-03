@@ -13,9 +13,9 @@ const socialIcons = [
     icon: <FacebookOutlinedIcon />,
     className: "p-[1px] cursor-pointer hover:text-blue-400",
   },
-  { icon: <TwitterIcon />, className: "p-[1px]  cursor-pointer hover:text-blue-400" },
-  { icon: <LanguageIcon />, className: "p-[1px]  cursor-pointer hover:text-red-400" },
-  { icon: <GitHubIcon />, className: "p-[1px]  cursor-pointer hover:text-gray-600" },
+  { icon: <TwitterIcon />, className: "p-[0.1px]  cursor-pointer hover:text-blue-400" },
+  { icon: <LanguageIcon />, className: "p-[0.1px]  cursor-pointer hover:text-red-400" },
+  { icon: <GitHubIcon />, className: "p-[0.1px]  cursor-pointer hover:text-gray-600" },
 ];
 
 export default function LeftBar() {
@@ -81,7 +81,7 @@ export default function LeftBar() {
       <div className="fixed  top-0 left-0 w-full bg-[#191C1B]  text-white p-4">
         <div className="flex justify-between items-center">
           <h1 className=" font-bold text-2xl">{name}</h1>
-          <div className="flex gap-3  p-[1px] -mr-20">
+          <div className="flex gap-2 p-[1px] -mr-17">
             {socialIcons.map((item, index) => (
               <div key={index} className={item.className}>
                 {item.icon}
@@ -114,7 +114,7 @@ export default function LeftBar() {
   const profileImageSrc = "./images/mee.jpg";
 
   return (
-    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white  w-[17%] float-left max-md:hidden ">
+    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white  xl:w-[17%] w-[0%] float-left ">
       {" "}
       <div className="flex flex-col items-center mt-7">
         <img
