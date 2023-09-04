@@ -26,37 +26,37 @@ export default function LeftBar() {
     {
       text: "Home",
       link: "#",
-      className: "text-green-500 font-medium  text-xl ",
+      className: "text-[#20c997] font-medium  text-xl ",
     },
     {
       text: "About me",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "What I Do",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Resume",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Profilo",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Testimonial",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Contact",
       link: "#",
-      className: "hover:text-green-300 font-medium text-xl ",
+      className: "hover:text-[#20c997] font-medium text-xl ",
     },
   ];
 
@@ -80,7 +80,7 @@ export default function LeftBar() {
     return (
       <div className="fixed  top-0 left-0 w-full bg-[#191C1B]  text-white p-4">
         <div className="flex justify-between items-center">
-          <h1 className=" font-bold text-2xl">{name}</h1>
+          <h1 className="font-medium  text-2xl">{name}</h1>
           <div className="flex gap-2 p-[1px] -mr-17">
             {socialIcons.map((item, index) => (
               <div key={index} className={item.className}>
@@ -114,7 +114,7 @@ export default function LeftBar() {
   const profileImageSrc = "./images/mee.jpg";
 
   return (
-    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white  xl:w-[17%] w-[0%] float-left ">
+    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left ">
       {" "}
       <div className="flex flex-col items-center mt-7">
         <img
@@ -122,34 +122,34 @@ export default function LeftBar() {
           alt=""
           className="rounded-[50%] border-8 w-40 h-40 border-zinc-800"
         />
-        <h1 className="text-lg font-semibold mt-3 opacity-90">{name}</h1>
+        <h1 className="text-lg  mt-3 opacity-90">{name}</h1>
       </div>
       <div className="list-none flex  flex-col items-center gap-5 mt-[100px] font-medium opacity-90">
         <a href="#">
-          <li className="text-green-500 hover:bg-green-500 font-semibold">
+          <li className="text-[#20c997] hover:text-[#20c997!important] ">
             Home
           </li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">About me</li>
+          <li className="hover:text-[#20c997] ">About me</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">What I Do</li>
+          <li className="hover:text-[#20c997] ">What I Do</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">Resume</li>
+          <li className="hover:text-[#20c997] ">Resume</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">Profilo</li>
+          <li className="hover:text-[#20c997] ">Profilo</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">Testimonial</li>
+          <li className="hover:text-[#20c997] ">Testimonial</li>
         </a>
         <a href="#">
-          <li className="hover:text-green-500 font-semibold">Contact</li>
+          <li className="hover:text-[#20c997] ">Contact</li>
         </a>
       </div>
-      <div className="flex justify-center items-end gap-3 opacity-50 xl:mt-[60px]  2xl:mt-[260px] ">
+      <div className="flex justify-center items-end gap-3 opacity-50 xl:mt-[60px]  2xl:mt-[255px] ">
         {socialIcons.map((item, index) => (
           <div key={index} className={item.className}>
             {item.icon}
