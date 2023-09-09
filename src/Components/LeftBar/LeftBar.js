@@ -124,7 +124,7 @@ export default function LeftBar() {
         />
         <h1 className="text-lg  mt-3 opacity-90">{name}</h1>
       </div>
-      <div className="list-none flex  flex-col items-center gap-5 mt-[100px] font-medium opacity-90">
+      <d iv className="list-none flex  flex-col items-center gap-5 mt-[100px] font-medium opacity-90">
         <a href="#">
           <li className="text-[#20c997] hover:text-[#20c997!important] ">
             Home
@@ -148,7 +148,7 @@ export default function LeftBar() {
         <a href="#">
           <li className="hover:text-[#20c997] ">Contact</li>
         </a>
-      </div>
+      </d>
       <div className="flex justify-center items-end gap-3 opacity-50 xl:mt-[60px]  2xl:mt-[255px] ">
         {socialIcons.map((item, index) => (
           <div key={index} className={item.className}>
