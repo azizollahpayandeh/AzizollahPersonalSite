@@ -8,7 +8,7 @@ import CampaignIcon from "@mui/icons-material/Campaign";
 
 export default function WhatIDo() {
   return (
-    <div className="bg-[#343a40!important] w-[100%] h-[125vh] xl:h-[85vh]">
+    <div className="bg-[#343a40!important] w-[100%] h-[115vh] xl:h-[85vh]">
       <div className="flex-col justify-center items-center text-center flex ">
         <h1 className="text-3xl font-bold xl:mt-28 mt-24">What I Do?</h1>
         <div className="w-[70px]  bg-[#20c997] mt-2 h-[3px]" />
