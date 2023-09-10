@@ -57,14 +57,14 @@ export default function WhatIDo() {
       description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
     },
     {
-      icon: <CampaignIcon className="m-2" />,
+      icon: <CampaignIcon className="m-3" />,
       title: "SEO Marketing",
       description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
     },
   ];
 
   return (
-    <div className="bg-[#343a40!important] w-[100%] h-[127vh] xl:h-[85vh]">
+    <div className="bg-[#343a40!important] w-[100%] h-auto xl:h-[85vh]">
       <div className="flex-col justify-center items-center text-center flex">
         <h1 className="text-3xl font-bold xl:mt-28 mt-24">What I Do?</h1>
         <div className="w-[70px]  bg-[#20c997] mt-2 h-[3px]" />
@@ -77,7 +77,7 @@ export default function WhatIDo() {
           ))}
         </div>
 
-        <div className="xl:w-1/2 xl:ml-11 xl:mr-5">
+        <div className="xl:w-1/2 xl:ml-11 mr-5">
           {servicesRight.map((service, index) => (
             <ServiceItem key={index} {...service} />
           ))}
