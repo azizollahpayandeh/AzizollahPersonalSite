@@ -6,107 +6,81 @@ import BrushIcon from "@mui/icons-material/Brush";
 import AddchartIcon from "@mui/icons-material/Addchart";
 import CampaignIcon from "@mui/icons-material/Campaign";
 
-export default function WhatIDo() {
+// Reusable component for a single service item
+function ServiceItem({ icon, title, description }) {
+  const iconStyle = {
+    fontSize: "40px", // Adjust the size as needed
+  };
+
   return (
-    <div className="bg-[#343a40!important] w-[100%] h-[115vh] xl:h-[85vh]">
-      <div className="flex-col justify-center items-center text-center flex ">
+    <div className="flex mt-10">
+      <div className="flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
+        {React.cloneElement(icon, { style: iconStyle })}
+      </div>
+
+      <div>
+        <h1 className="text-xl font-medium">{title}</h1>
+        <p className="opacity-50 mt-1">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+export default function WhatIDo() {
+  const servicesLeft = [
+    {
+      icon: <PaletteIcon className="m-3" />,
+      title: "Graphic Design",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+    {
+      icon: <DesignServicesIcon className="m-3" />,
+      title: "UI/UX Design",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+    {
+      icon: <AddchartIcon className="m-3" />,
+      title: "Business Analysis",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+  ];
+
+  const servicesRight = [
+    {
+      icon: <PersonalVideoIcon className="m-3" />,
+      title: "Web Design",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+    {
+      icon: <BrushIcon className="m-3" />,
+      title: "App Design & Develop",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+    {
+      icon: <CampaignIcon className="m-2" />,
+      title: "SEO Marketing",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    },
+  ];
+
+  return (
+    <div className="bg-[#343a40!important] w-[100%] h-[127vh] xl:h-[85vh]">
+      <div className="flex-col justify-center items-center text-center flex">
         <h1 className="text-3xl font-bold xl:mt-28 mt-24">What I Do?</h1>
         <div className="w-[70px]  bg-[#20c997] mt-2 h-[3px]" />
       </div>
 
       <div className="xl:flex ml-3 xl:justify-evenly mt-8">
-        <div>
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <PaletteIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">Graphic Design</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <DesignServicesIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">UI/UX Design</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <AddchartIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">Business Analysis</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
+        <div className="xl:w-1/2 xl:ml-11">
+          {servicesLeft.map((service, index) => (
+            <ServiceItem key={index} {...service} />
+          ))}
         </div>
 
-        <div className="xl:ml-12">
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <PersonalVideoIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">Web Design</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <BrushIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">App Design & Develop</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex mt-10">
-            <div className=" flex w-[65px] h-[60px] bg-[#212529!important] text-[#20c997] mr-5 rounded-lg mt-2">
-              <CampaignIcon className="m-5" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-medium">SEO Marketing</h1>
-              <p className="opacity-50 mt-1">
-                Lisque persius interesset his et, in quot quidam
-                <br />
-                persequeris vim, ad mea essent possim iriure.
-              </p>
-            </div>
-          </div>
+        <div className="xl:w-1/2 xl:ml-11 xl:mr-5">
+          {servicesRight.map((service, index) => (
+            <ServiceItem key={index} {...service} />
+          ))}
         </div>
       </div>
     </div>

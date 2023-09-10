@@ -1,6 +1,7 @@
 import React from "react";
 import WhatIDo from "../WhatIDo/WhatIDo";
 import AbouMe from "../../Components/AboutMe/AbouMe";
+import Resume from "../Resume/Resume";
 
 import Typewriter from "typewriter-effect";
 
@@ -45,6 +46,7 @@ export default function RightBar() {
     </div>
     <AbouMe/>
     <WhatIDo/>
+    <Resume/>
             
     </div>
 
