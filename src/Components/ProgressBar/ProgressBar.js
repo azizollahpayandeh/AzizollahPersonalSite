@@ -17,7 +17,7 @@ const ProgressBar = ({ progress, Title }) => {
       </div>
       <div className="relative w-full bg-gray-200 rounded-full">
         <div
-          className="absolute top-0 h-2 bg-gray-400  rounded-r-full"
+          className="absolute top-0 h-2 bg-black  rounded-r-full"
           style={{ width: `${100 - progress}%`, right: 0 }}
         ></div>
         <div
