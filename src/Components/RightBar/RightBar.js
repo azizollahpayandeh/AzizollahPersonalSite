@@ -3,6 +3,7 @@ import WhatIDo from "../WhatIDo/WhatIDo";
 import AbouMe from "../../Components/AboutMe/AbouMe";
 import Resume from "../Resume/Resume";
 import Client from "../Client/Client";
+import Concat from "../Concat/Concat";
 
 import Typewriter from "typewriter-effect";
 
@@ -49,6 +50,7 @@ export default function RightBar() {
     <WhatIDo/>
     <Resume/>
     <Client/>
+    <Concat/>
     </div>
 
   );

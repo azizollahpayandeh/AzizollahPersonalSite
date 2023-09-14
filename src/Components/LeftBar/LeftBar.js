@@ -10,12 +10,12 @@ const name = "Azizollah Payandeh";
 
 const socialIcons = [
   {
-    icon: <FacebookOutlinedIcon />,
+    icon: <FacebookOutlinedIcon fontSize="small"/>,
     className: "p-[1px] cursor-pointer hover:text-blue-400",
   },
-  { icon: <TwitterIcon />, className: "p-[0.1px]  cursor-pointer hover:text-blue-400" },
-  { icon: <LanguageIcon />, className: "p-[0.1px]  cursor-pointer hover:text-red-400" },
-  { icon: <GitHubIcon />, className: "p-[0.1px]  cursor-pointer hover:text-gray-600" },
+  { icon: <TwitterIcon fontSize="small" />, className: " cursor-pointer hover:text-blue-400" },
+  { icon: <LanguageIcon fontSize="small" />, className: " cursor-pointer hover:text-red-400" },
+  { icon: <GitHubIcon fontSize="small" />, className: " cursor-pointer hover:text-gray-600" },
 ];
 
 export default function LeftBar() {
@@ -81,7 +81,7 @@ export default function LeftBar() {
       <div className="fixed  top-0 left-0 w-full bg-[#121212]  text-white p-4">
         <div className="flex justify-between items-center">
           <h1 className="font-medium  text-2xl">{name}</h1>
-          <div className="flex gap-2 p-[1px] -mr-17">
+          <div className="flex gap-2  -mr-17">
             {socialIcons.map((item, index) => (
               <div key={index} className={item.className}>
                 {item.icon}
