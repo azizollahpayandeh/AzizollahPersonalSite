@@ -72,7 +72,7 @@ export default function Contact({ id }) {
         {/* سمت راست */}
         <div className="right xl:col-span-9 hidden xl:block xl:ml-10">
           <h1 className="text-xl font-medium">SEND US A NOTE</h1>
-          <div className="xl:flex xl:gap-5 mt-4">
+          <div className="xl:flex xl:gap-5 mt-6">
             <input
               type="text"
               placeholder="Name"
@@ -85,7 +85,7 @@ export default function Contact({ id }) {
             />
           </div>
           <textarea
-            className="bg-[#191e22] rounded-lg w-full xl:w-[820px] h-[150px] p-4 outline-none "
+            className="bg-[#191e22] rounded-lg w-full xl:w-[820px] h-[150px] p-4 outline-none mt-5 "
             placeholder="Tell us more about your needs..."
           ></textarea>
 
