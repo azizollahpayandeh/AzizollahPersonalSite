@@ -4,7 +4,7 @@ import AbouMe from "../../Components/AboutMe/AbouMe";
 import Resume from "../Resume/Resume";
 import Client from "../Client/Client";
 import Concat from "../Concat/Concat";
-import EndText from "../../EndText/EndText";
+import EndText from "../EndText/EndText";
 import Typewriter from "typewriter-effect";
 
 export default function RightBar() {
