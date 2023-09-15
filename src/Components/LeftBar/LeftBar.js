@@ -12,18 +12,25 @@ const socialIcons = [
   {
     icon: <FacebookOutlinedIcon fontSize="small" />,
     className: "p-[1px] cursor-pointer hover:text-blue-400",
+    ahref:"https://www.facebook.com/profile.php?id=100088842394121"
   },
   {
     icon: <TwitterIcon fontSize="small" />,
     className: " cursor-pointer hover:text-blue-400",
+    ahref:"sabzlearn.ir"
+
   },
   {
     icon: <LanguageIcon fontSize="small" />,
     className: " cursor-pointer hover:text-red-400",
+    ahref:"sabzlearn.ir"
+
   },
   {
     icon: <GitHubIcon fontSize="small" />,
     className: " cursor-pointer hover:text-gray-600",
+    ahref:"https://github.com/azizollahpayandeh"
+
   },
 ];
 
@@ -292,7 +299,7 @@ export default function LeftBar() {
       </div>
       <div className="flex justify-center items-end gap-4 opacity-50 xl:mt-[150px] ">
         {socialIcons.map((item, index) => (
-          <div key={index} className={item.className}>
+          <div key={index} className={item.className} href={item.ahref}>
             {item.icon}
           </div>
         ))}
