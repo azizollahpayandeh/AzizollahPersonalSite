@@ -61,7 +61,7 @@ export default function MyEducation() {
       </div>
 
       <div className=" text-center">
-        <button className="2xl:mt-7 mt-11 xl:mt-16 border hover:bg-gray-400 opacity-50 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out mb-11" onClick={handleDownloadClick}>
+        <button className=" mt-11 xl:mt-16 border hover:bg-gray-400 opacity-50 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out mb-11" onClick={handleDownloadClick}>
           Download CV
         </button>
       </div>
