@@ -10,15 +10,125 @@ const name = "Azizollah Payandeh";
 
 const socialIcons = [
   {
-    icon: <FacebookOutlinedIcon fontSize="small"/>,
+    icon: <FacebookOutlinedIcon fontSize="small" />,
     className: "p-[1px] cursor-pointer hover:text-blue-400",
   },
-  { icon: <TwitterIcon fontSize="small" />, className: " cursor-pointer hover:text-blue-400" },
-  { icon: <LanguageIcon fontSize="small" />, className: " cursor-pointer hover:text-red-400" },
-  { icon: <GitHubIcon fontSize="small" />, className: " cursor-pointer hover:text-gray-600" },
+  {
+    icon: <TwitterIcon fontSize="small" />,
+    className: " cursor-pointer hover:text-blue-400",
+  },
+  {
+    icon: <LanguageIcon fontSize="small" />,
+    className: " cursor-pointer hover:text-red-400",
+  },
+  {
+    icon: <GitHubIcon fontSize="small" />,
+    className: " cursor-pointer hover:text-gray-600",
+  },
 ];
 
 export default function LeftBar() {
+
+  const [activeSection, setActiveSection] = useState(null);
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+
+      const aboutSection = document.getElementById("about");
+      const whatIDoSection = document.getElementById("whatido");
+      const resumeSection = document.getElementById("resume");
+      const testimonialSection = document.getElementById("testimonial");
+      const concatSection = document.getElementById("concat");
+  
+      const yOffset = window.scrollY;
+  
+      if (
+        yOffset >= aboutSection.offsetTop &&
+        yOffset < whatIDoSection.offsetTop
+      ) {
+        setActiveSection("about");
+      } else if (
+        yOffset >= whatIDoSection.offsetTop &&
+        yOffset < resumeSection.offsetTop
+      ) {
+        setActiveSection("whatido");
+      } else if (
+        yOffset >= resumeSection.offsetTop &&
+        yOffset < testimonialSection.offsetTop
+      ) {
+        setActiveSection("resume");
+      } else if (
+        yOffset >= testimonialSection.offsetTop &&
+        yOffset < concatSection.offsetTop
+      ) {
+        setActiveSection("testimonial");
+      } else if (yOffset >= concatSection.offsetTop) {
+        setActiveSection("concat");
+      } else {
+        setActiveSection(null);
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    // حذف ایونت لیسنر در هنگام عدم استفاده
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeSection]);
+  
+
+  const scrollToAbout = () => {
+    const sectionElement = document.getElementById("about");
+    if (sectionElement) {
+      const yOffset =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+    setActiveMenuItem("about");
+  };
+
+  const scrollToWhatIDo = () => {
+    const sectionElement = document.getElementById("whatido");
+    if (sectionElement) {
+      const yOffset =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+    setActiveMenuItem("whatido");
+  };
+
+  const scrollToResume = () => {
+    const sectionElement = document.getElementById("resume");
+    if (sectionElement) {
+      const yOffset =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+    setActiveMenuItem("resume");
+  };
+
+  const scrollToTestimonial = () => {
+    const sectionElement = document.getElementById("testimonial");
+    if (sectionElement) {
+      const yOffset =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+    setActiveMenuItem("testimonial");
+  };
+
+  const scrollToConcat = () => {
+    const sectionElement = document.getElementById("concat");
+    if (sectionElement) {
+      const yOffset =
+        sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+    setActiveMenuItem("concat");
+  };
   const [showLeftBar, setShowLeftBar] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -30,32 +140,27 @@ export default function LeftBar() {
     },
     {
       text: "About me",
-      link: "#",
+      link: "#about",
       className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "What I Do",
-      link: "#",
+      link: "#whatido",
       className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Resume",
-      link: "#",
-      className: "hover:text-[#20c997] font-medium text-xl ",
-    },
-    {
-      text: "Profilo",
-      link: "#",
+      link: "#resume",
       className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Testimonial",
-      link: "#",
+      link: "#testimonial",
       className: "hover:text-[#20c997] font-medium text-xl ",
     },
     {
       text: "Contact",
-      link: "#",
+      link: "#concat",
       className: "hover:text-[#20c997] font-medium text-xl ",
     },
   ];
@@ -80,7 +185,7 @@ export default function LeftBar() {
     return (
       <div className="fixed  top-0 left-0 w-full bg-[#121212]  text-white p-4">
         <div className="flex justify-between items-center">
-          <h1 className="font-medium  text-2xl">{name}</h1>
+          <h1 className="font-medium text-2xl ">{name}</h1>
           <div className="flex gap-2  -mr-17">
             {socialIcons.map((item, index) => (
               <div key={index} className={item.className}>
@@ -124,32 +229,69 @@ export default function LeftBar() {
         />
         <h1 className="text-lg  mt-3 opacity-90">{name}</h1>
       </div>
-      <d iv className="list-none flex  flex-col items-center gap-5 mt-[100px] font-medium opacity-90">
+      <div className="list-none flex  flex-col items-center gap-6 mt-[100px] font-medium opacity-90">
         <a href="#">
-          <li className="text-[#20c997] hover:text-[#20c997!important] ">
+          <li
+             className={`${
+              activeMenuItem === "Home" ? "text-[#20c997]" : "hover:text-[#20c997]"
+            } ${activeSection === "Home" ? "text-[#20c997]" : ""}`}
+            onClick={() => setActiveMenuItem("Home")}
+          >
             Home
           </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">About me</li>
+        <a href="#about">
+          <li
+              className={`${
+                activeMenuItem === "about" ? "text-[#20c997]" : "hover:text-[#20c997]"
+              } ${activeSection === "about" ? "text-[#20c997]" : ""}`}
+            onClick={scrollToAbout}
+          >
+            About me
+          </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">What I Do</li>
+        <a href="#whatido">
+          <li
+           className={`${
+            activeMenuItem === "whatido" ? "text-[#20c997]" : "hover:text-[#20c997]"
+          } ${activeSection === "whatido" ? "text-[#20c997]" : ""}`}
+            onClick={scrollToWhatIDo}
+          >
+            What I Do
+          </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">Resume</li>
+        <a href="#resume">
+          <li
+            className={`${
+              activeMenuItem === "resume" ? "text-[#20c997]" : "hover:text-[#20c997]"
+            } ${activeSection === "resume" ? "text-[#20c997]" : ""}`}
+            onClick={scrollToResume}
+          >
+            Resume
+          </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">Profilo</li>
+        <a href="#testimonial">
+          <li
+            className={`${
+              activeMenuItem === "testimonial" ? "text-[#20c997]" : "hover:text-[#20c997]"
+            } ${activeSection === "testimonial" ? "text-[#20c997]" : ""}`}
+            onClick={scrollToTestimonial}
+          >
+            Testimonial
+          </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">Testimonial</li>
+        <a href="#concat">
+          <li
+      className={`${
+        activeMenuItem === "concat" ? "text-[#20c997]" : "hover:text-[#20c997]"
+      } ${activeSection === "concat" ? "text-[#20c997]" : ""}`}
+            onClick={scrollToConcat}
+          >
+            Contact
+          </li>
         </a>
-        <a href="#">
-          <li className="hover:text-[#20c997] ">Contact</li>
-        </a>
-      </d>
-      <div className="flex justify-center items-end gap-3 opacity-50 xl:mt-[60px]  2xl:mt-[255px] ">
+      </div>
+      <div className="flex justify-center items-end gap-4 opacity-50 xl:mt-[80px]  2xl:mt-[255px] ">
         {socialIcons.map((item, index) => (
           <div key={index} className={item.className}>
             {item.icon}

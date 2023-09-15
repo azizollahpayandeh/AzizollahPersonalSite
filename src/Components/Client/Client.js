@@ -5,7 +5,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export default function Client() {
+export default function Client({id}) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Client() {
 
   return (
     <div>
-      <div className="bg-[#343a40!important] h-[90vh]">
+      <div className="bg-[#343a40!important] h-[90vh]" id={id}>
         <div className="flex-col justify-center items-center text-center flex">
           <h1 className="text-3xl font-bold xl:mt-28 mt-24">Client Speak</h1>
           <div className="w-[70px] bg-[#20c997] mt-2 h-[3px]" />
