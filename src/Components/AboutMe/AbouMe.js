@@ -11,6 +11,19 @@ function InfoItem({ label, value }) {
 }
 
 export default function AboutMe({id}) {
+
+    const handleDownloadClick = () => {
+       
+        const link = document.createElement('a');
+        link.href = './file/AzizollahResume.pdf'; 
+        link.download = 'AzizollahResume.pdf'; 
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+
   const name = "Azizollah Payandeh";
   const email = "AzizollahPayandeh1@gmail.com";
   const age = 17;
@@ -43,7 +56,7 @@ export default function AboutMe({id}) {
           <InfoItem label="Age" value={age} />
           <hr className="2xl:opacity-0 opacity-50 mt-2 xl:w-[400px]" />
           <InfoItem label="From" value={from} />
-          <button className="2xl:mt-7 mt-8 xl:mt-6 bg-green-600 hover:bg-green-500 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out">
+          <button className="2xl:mt-7 mt-8 xl:mt-6 bg-green-600 hover:bg-green-500 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out" onClick={handleDownloadClick}>
             Download CV
           </button>
         </div>

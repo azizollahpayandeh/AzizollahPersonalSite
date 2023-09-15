@@ -29,6 +29,16 @@ const skillsData = [
 ];
 
 export default function MyEducation() {
+  const handleDownloadClick = () => {
+       
+    const link = document.createElement('a');
+    link.href = './file/AzizollahResume.pdf'; 
+    link.download = 'AzizollahResume.pdf'; 
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   return (
     <div>
       <div className="leftEducation xl:ml-11 xl:mt-20 mt-20 ml-5 ">
@@ -51,7 +61,7 @@ export default function MyEducation() {
       </div>
 
       <div className=" text-center">
-        <button className="2xl:mt-7 mt-11 xl:mt-16 border hover:bg-gray-400 opacity-50 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out mb-11">
+        <button className="2xl:mt-7 mt-11 xl:mt-16 border hover:bg-gray-400 opacity-50 w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out mb-11" onClick={handleDownloadClick}>
           Download CV
         </button>
       </div>
