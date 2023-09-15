@@ -17,7 +17,7 @@ export default function RightBar() {
   };
 
   return (
-    <div className="xl:w-[83%] w-[100%] float-right">
+    <div className="xl:w-[83%] w-[100%] float-right ml-7">
       <div
         className="right-bar  overflow-auto bg-fixed bg-cover bg-no-repeat bg-center col-span-10 md:col-span-2 h-[100vh]  "
         style={{ backgroundImage: `url(./images/introC.jpg)` }}

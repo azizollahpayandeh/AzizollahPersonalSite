@@ -41,7 +41,7 @@ export default function MyEducation() {
 
       <div className="mt-11 ml-4 mr-4 xl:ml-11">
         <h1 className="text-2xl font-semibold mb-4">My Skills</h1>
-        <div className="grid xl:grid-cols-2 gap-4"> {/* تغییر اعمال شده */}
+        <div className="grid xl:grid-cols-2 gap-6"> {/* تغییر اعمال شده */}
           {skillsData.map((skill, index) => (
             <div className="mb-4">
              <ProgressBar key={index} progress={skill.progress} Title={skill.title} />

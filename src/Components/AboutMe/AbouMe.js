@@ -35,7 +35,7 @@ export default function AboutMe({id}) {
           </p>
         </div>
 
-        <div className="xl:col-span-5 xl:mt-9 xl:ml-14 2xl:ml-10 mt-12 ml-5">
+        <div className="xl:col-span-5 xl:mt-9 xl:ml-16 2xl:ml-10 mt-12 ml-10">
           <InfoItem label="Name" value={name} />
           <hr className="2xl:opacity-0 opacity-50 mt-2 xl:w-[400px]" />
           <InfoItem label="Email" value={email} />

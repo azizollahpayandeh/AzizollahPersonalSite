@@ -34,7 +34,7 @@ export default function Client({id}) {
           <h1 className="text-3xl font-bold xl:mt-28 mt-24">Client Speak</h1>
           <div className="w-[70px] bg-[#20c997] mt-2 h-[3px]" />
         </div>
-        <div className="relative xl:flex justify-center items-center gap-6 mt-10 xl:ml-11 ml-5 mr-5">
+        <div className="relative xl:flex justify-center items-center gap-6 mt-10 xl:ml-16 ml-5 mr-5">
           <Swiper
             className={`mt-16 ${isMobile ? 'swiper-mobile' : ''}`}
             modules={[Navigation, Pagination, Scrollbar, A11y]}

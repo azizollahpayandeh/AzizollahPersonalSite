@@ -70,7 +70,7 @@ export default function Contact({ id }) {
         </div>
 
         {/* سمت راست */}
-        <div className="right xl:col-span-9 hidden xl:block">
+        <div className="right xl:col-span-9 hidden xl:block xl:ml-10">
           <h1 className="text-xl font-medium">SEND US A NOTE</h1>
           <div className="xl:flex xl:gap-5 mt-4">
             <input
