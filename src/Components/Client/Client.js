@@ -41,6 +41,7 @@ export default function Client({id}) {
             spaceBetween={30}
             slidesPerView={isMobile ? 1 : 2} 
             loop={true}
+            pagination={true}
             navigation={true}
           >
             {swiperElements}

@@ -5,7 +5,7 @@ const clientImage = "./images/client-sm-1.jpg";
 
 const ClientBox = () => {
   return (
-    <div className="clientBox bg-[#181a1f] xl:w-[500px] rounded-lg p-6">
+    <div className="clientBox bg-[#181a1f] xl:w-[530px] rounded-lg p-6">
       <div className="flex mt-4">
         <div className="img">
           <img src={clientImage} alt="Client" className="rounded-[50%]" />
