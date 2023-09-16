@@ -299,7 +299,7 @@ export default function LeftBar() {
             </a>
           </div>
         </div>
-        <div className="flex gap-4 opacity-50 justify-center m-24">
+        <div className="flex gap-4 opacity-50 justify-center m-32">
           {socialIcons.map((item, index) => (
             <a key={index} className={item.className} href={item.href}>
               {item.icon}
