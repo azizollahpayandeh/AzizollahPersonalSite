@@ -38,7 +38,7 @@ export default function Contact({ id }) {
 
             <div className="mt-1 opacity-80">
               <EmailIcon className="text-[#20c997] mr-2" />
-              <span className=" opacity-90">
+              <span className=" opacity-90 hover:text-[#20c997]">
                 <a href="https://azizollahpayandeh1@gmail.com">
                   azizollahpayandeh1@gmail.com
                 </a>
