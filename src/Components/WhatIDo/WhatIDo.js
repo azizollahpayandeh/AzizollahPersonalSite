@@ -64,7 +64,7 @@ export default function WhatIDo({id}) {
   ];
 
   return (
-    <div className="bg-[#343a40!important] w-[100%] h-auto xl:h-[85vh]" id={id}>
+    <div className="bg-[#343a40!important] w-[100%] h-[100vh] xl:h-[85vh]" id={id}>
       <div className="flex-col justify-center items-center text-center flex">
         <h1 className="text-3xl font-bold xl:mt-28 mt-24">What I Do?</h1>
         <div className="w-[70px]  bg-[#20c997] mt-2 h-[3px]" />

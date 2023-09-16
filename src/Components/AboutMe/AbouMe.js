@@ -30,7 +30,7 @@ export default function AboutMe({id}) {
   const from = "Iran, Mashhad";
 
   return (
-    <div className="w-full xl:h-auto bg-[#212529!important]" id={id}>
+    <div className="w-full xl:h-[90vh] bg-[#212529!important]" id={id}>
       <div className="flex-col justify-center items-center text-center flex">
         <h1 className="text-3xl font-bold xl:mt-28 mt-24">Know Me More</h1>
         <div className="w-[70px] bg-[#20c997] mt-2 h-[3px]" />
