@@ -1,12 +1,12 @@
 import React from "react";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LanguageIcon from "@mui/icons-material/Language";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import FaxIcon from "@mui/icons-material/Fax";
 import EmailIcon from "@mui/icons-material/Email";
-import GoogleIcon from "@mui/icons-material/Google";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 export default function Contact({ id }) {
   return (
@@ -17,53 +17,72 @@ export default function Contact({ id }) {
       </div>
 
       <div className="container grid xl:grid-cols-12 mt-20">
-        <div className="left xl:col-span-3 xl:ml-10 xl:flex xl:flex-col xl:text-left text-center">
+        <div className="left xl:col-span-3 xl:ml-5 xl:flex xl:flex-col xl:text-left text-center">
           <h1 className="text-xl font-medium">ADDRESS</h1>
           <div className="flex flex-col opacity-80 mt-3">
-            <span>4th Floor, Plot No.22,</span>
-            <span>45 Murphy Canyon Rd.</span>
-            <span>San Diego CA 2028</span>
+            <span>2th Floor, tag 48, Abdi 16</span>
+            <span>Tus, Boulevard</span>
+            <span>Iran, Mashhad</span>
           </div>
 
           <div className="mt-9">
             <div className="mt-1 opacity-80">
               <LocalPhoneIcon className="text-[#20c997] mr-2" />
-              <span>(060) 444 434 444</span>
+              <span>(+98) 05 6113 913</span>
             </div>
 
             <div className="mt-1 opacity-80">
               <FaxIcon className="text-[#20c997] mr-2" />
-              <span>(060) 444 434 444</span>
+              <span>(053) 000 000 000</span>
             </div>
 
             <div className="mt-1 opacity-80">
               <EmailIcon className="text-[#20c997] mr-2" />
-              <span>chat@simone.com</span>
+              <span className=" opacity-90">
+                <a href="https://azizollahpayandeh1@gmail.com">
+                  azizollahpayandeh1@gmail.com
+                </a>
+              </span>
             </div>
 
             <div className="mt-6 mb-14">
               <h1 className="text-xl font-medium">FOLLOW ME</h1>
               <div className="mt-4 opacity-70 gap-4 flex justify-center xl:justify-start ml-1">
-                <FacebookOutlinedIcon
-                  fontSize="small"
-                  className="cursor-pointer hover:text-blue-400 opacity-80"
-                />
-                <TwitterIcon
-                  fontSize="small"
-                  className="cursor-pointer hover:text-blue-400 opacity-80"
-                />
-                <LanguageIcon
-                  fontSize="small"
-                  className="cursor-pointer hover:text-red-400 opacity-80"
-                />
-                <GitHubIcon
-                  fontSize="small"
-                  className="cursor-pointer hover:text-gray-400 opacity-80"
-                />
-                <GoogleIcon
-                  fontSize="small"
-                  className="cursor-pointer hover:text-red-400 opacity-80"
-                />
+                <a href="https://www.facebook.com/Azizollah%20Payandeh">
+                  {" "}
+                  <FacebookOutlinedIcon
+                    fontSize="small"
+                    className="cursor-pointer hover:text-blue-400 opacity-80"
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/azizollah-payandeh-70139b262/">
+                  {" "}
+                  <LinkedInIcon
+                    fontSize="small"
+                    className="cursor-pointer hover:text-blue-400 opacity-80"
+                  />
+                </a>
+                <a href="https://www.instagram.com/ars.alanpa">
+                  {" "}
+                  <InstagramIcon
+                    fontSize="small"
+                    className="cursor-pointer hover:text-red-400 opacity-80"
+                  />
+                </a>
+                <a href="https://github.com/azizollahpayandeh">
+                  {" "}
+                  <GitHubIcon
+                    fontSize="small"
+                    className="cursor-pointer hover:text-gray-400 opacity-80"
+                  />
+                </a>
+                <a href="https://t.me/azizollah010101">
+                  {" "}
+                  <TelegramIcon
+                    fontSize="small"
+                    className="cursor-pointer hover:text-red-400 opacity-80"
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -1,35 +1,36 @@
 import React, { useState, useEffect } from "react";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
-import LanguageIcon from "@mui/icons-material/Language";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
+import TelegramIcon from "@mui/icons-material/Telegram";
 const name = "Azizollah Payandeh";
 
 const socialIcons = [
   {
-    icon: <FacebookOutlinedIcon fontSize="small" />,
+    icon: <a href="https://www.facebook.com/Azizollah%20Payandeh"><FacebookOutlinedIcon fontSize="small" /></a>,
     className: "p-[1px] cursor-pointer hover:text-blue-400",
-    ahref:"https://www.facebook.com/profile.php?id=100088842394121"
   },
   {
-    icon: <TwitterIcon fontSize="small" />,
+    icon: <a href="https://www.linkedin.com/in/azizollah-payandeh-70139b262/"><LinkedInIcon fontSize="small" /></a>,
     className: " cursor-pointer hover:text-blue-400",
-    ahref:"sabzlearn.ir"
 
   },
   {
-    icon: <LanguageIcon fontSize="small" />,
+    icon: <a href="https://www.instagram.com/ars.alanpa"><InstagramIcon fontSize="small" /></a>,
     className: " cursor-pointer hover:text-red-400",
-    ahref:"sabzlearn.ir"
 
   },
   {
-    icon: <GitHubIcon fontSize="small" />,
+    icon: <a href="https://github.com/azizollahpayandeh"><GitHubIcon fontSize="small" /></a>,
     className: " cursor-pointer hover:text-gray-600",
-    ahref:"https://github.com/azizollahpayandeh"
+
+  },
+  {
+    icon: <a href="https://t.me/azizollah010101"><TelegramIcon fontSize="small" /></a>,
+    className: " cursor-pointer hover:text-gray-600",
 
   },
 ];

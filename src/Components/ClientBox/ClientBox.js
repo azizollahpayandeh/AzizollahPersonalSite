@@ -1,28 +1,27 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 
-const clientImage = "./images/client-sm-1.jpg";
 
-const ClientBox = () => {
+
+const ClientBox = ({clientInfo }) => {
+  const {name, country, dec , img} = clientInfo
   return (
     <div className="clientBox bg-[#181a1f] xl:w-[530px] rounded-lg p-6 mb-11 ml-2 mr-2">
       <div className="flex mt-4">
         <div className="img">
-          <img src={clientImage} alt="Client" className="rounded-[50%]" />
+          <img src={img} alt="Client" className="rounded-[50%]" />
         </div>
 
         <div className="ml-4 flex flex-col">
-          <h1 className="text-xl mb-1">Dennis Jacques</h1>
-          <span className="opacity-50">User from USA</span>
+          <h1 className="text-xl mb-1">{name}</h1>
+          <span className="opacity-50">{country}</span>
         </div>
       </div>
 
       <div className="mt-4">
         <div className="opacity-95">
           <p className="mt-2">
-            "Only trying it out since a few days. But up to now excellent.
-            Seems to work flawlessly. priced simply dummy text of the printing
-            and typesetting industry."
+{dec}
           </p>
         </div>
         <div className="mt-4">

@@ -20,12 +20,12 @@ const educationData = [
 
 // آرایه اطلاعات مهارت‌ها
 const skillsData = [
-  { progress: "80", title: "HTML" },
-  { progress: "50", title: "JavaScript" },
-  { progress: "20", title: "React" },
-  { progress: "50", title: "React" },
-  { progress: "65", title: "React" },
-  { progress: "75", title: "React" }
+  { progress: "85", title: "HTML/CSS" },
+  { progress: "70", title: "JavaScript" },
+  { progress: "75", title: "React" },
+  { progress: "80", title: "Tailwind" },
+  { progress: "65", title: "BootStrap" },
+  { progress: "75", title: "Git/GitHub" }
 ];
 
 export default function MyEducation() {

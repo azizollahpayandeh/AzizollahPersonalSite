@@ -5,14 +5,14 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export default function Client({id}) {
+export default function Client({ id }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); 
+      setIsMobile(window.innerWidth < 768);
     };
-    
+
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -21,9 +21,17 @@ export default function Client({id}) {
     };
   }, []);
 
-  const swiperElements = Array.from({ length: 4 }, (_, index) => (
+  // اطلاعات دینامیک مشتریان را ایجاد کنید
+  const clientData = [
+    { name: "Dennis Jacques", img: "./images/client-sm-1.jpg", country: "User from USA", dec: "Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry." },
+    { name: "Jay Shah", img: "./images/client-sm-2.jpg", country: "Founder at Icomatic Pvt Ltd", dec: "Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure." },
+    { name: "Patrick Cary", img: "./images/client-sm-3.jpg", country: "Freelancer from USA", dec: "I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure." },
+    { name: "Chris Tom", img: "./images/client-sm-4.jpg", country: "User from UK", dec: "Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry." },
+  ];
+
+  const swiperElements = clientData.map((clientInfo, index) => (
     <SwiperSlide key={index}>
-      <ClientBox />
+      <ClientBox clientInfo={clientInfo} />
     </SwiperSlide>
   ));
 
@@ -39,13 +47,12 @@ export default function Client({id}) {
             className={`mt-16 ${isMobile ? 'swiper-mobile' : ''}`}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={30}
-            slidesPerView={isMobile ? 1 : 2} 
+            slidesPerView={isMobile ? 1 : 2}
             loop={true}
             pagination={true}
             navigation={true}
           >
             {swiperElements}
-          
           </Swiper>
         </div>
       </div>
