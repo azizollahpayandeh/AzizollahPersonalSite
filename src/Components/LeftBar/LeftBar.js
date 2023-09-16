@@ -225,85 +225,90 @@ export default function LeftBar() {
   const profileImageSrc = "./images/mee.jpg";
 
   return (
-    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left ">
-      {" "}
-      <div className="flex flex-col items-center mt-7">
-        <img
-          src={profileImageSrc}
-          alt=""
-          className="rounded-[50%] border-8 w-40 h-40 border-zinc-800"
-        />
-        <h1 className="text-lg  mt-3 opacity-90">{name}</h1>
-      </div>
-      <div className="list-none flex  flex-col items-center gap-6 mt-[100px] font-medium opacity-90">
-        <a href="#">
-          <li
-             className={`${
-              activeMenuItem === "Home" ? "text-[#20c997]" : "hover:text-[#20c997]"
-            } ${activeSection === "Home" ? "text-[#20c997]" : ""}`}
-            onClick={() => setActiveMenuItem("Home")}
-          >
-            Home
-          </li>
-        </a>
-        <a href="#about">
-          <li
-              className={`${
-                activeMenuItem === "about" ? "text-[#20c997]" : "hover:text-[#20c997]"
-              } ${activeSection === "about" ? "text-[#20c997]" : ""}`}
-            onClick={scrollToAbout}
-          >
-            About me
-          </li>
-        </a>
-        <a href="#whatido">
-          <li
-           className={`${
-            activeMenuItem === "whatido" ? "text-[#20c997]" : "hover:text-[#20c997]"
-          } ${activeSection === "whatido" ? "text-[#20c997]" : ""}`}
-            onClick={scrollToWhatIDo}
-          >
-            What I Do
-          </li>
-        </a>
-        <a href="#resume">
-          <li
-            className={`${
-              activeMenuItem === "resume" ? "text-[#20c997]" : "hover:text-[#20c997]"
-            } ${activeSection === "resume" ? "text-[#20c997]" : ""}`}
-            onClick={scrollToResume}
-          >
-            Resume
-          </li>
-        </a>
-        <a href="#testimonial">
-          <li
-            className={`${
-              activeMenuItem === "testimonial" ? "text-[#20c997]" : "hover:text-[#20c997]"
-            } ${activeSection === "testimonial" ? "text-[#20c997]" : ""}`}
-            onClick={scrollToTestimonial}
-          >
-            Testimonial
-          </li>
-        </a>
-        <a href="#concat">
-          <li
-      className={`${
-        activeMenuItem === "concat" ? "text-[#20c997]" : "hover:text-[#20c997]"
-      } ${activeSection === "concat" ? "text-[#20c997]" : ""}`}
-            onClick={scrollToConcat}
-          >
-            Contact
-          </li>
-        </a>
-      </div>
-      <div className="flex gap-4 opacity-50 w-[100%] h-[300px] justify-center items-end ">
-        {socialIcons.map((item, index) => (
-          <div key={index} className={item.className} href={item.href}>
-            {item.icon}
+    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left">
+      <div className="all box flex flex-col justify-between">
+        <div>
+          <div className="flex flex-col items-center mt-7">
+            <img
+              src={profileImageSrc}
+              alt="profile"
+              className="rounded-[50%] border-8 w-40 h-40 border-zinc-800"
+            />
+            <h1 className="text-lg mt-3 opacity-90">{name}</h1>
           </div>
-        ))}
+          <div className="list-none flex flex-col items-center gap-6 mt-[100px] font-medium opacity-90">
+            <a href="#">
+              <li
+                className={`${
+                  activeMenuItem === "Home" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "Home" ? "text-[#20c997]" : ""}`}
+                onClick={() => setActiveMenuItem("Home")}
+              >
+                Home
+              </li>
+            </a>
+            <a href="#about">
+              <li
+                className={`${
+                  activeMenuItem === "about" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "about" ? "text-[#20c997]" : ""}`}
+                onClick={scrollToAbout}
+              >
+                About me
+              </li>
+            </a>
+            <a href="#whatido">
+              <li
+                className={`${
+                  activeMenuItem === "whatido" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "whatido" ? "text-[#20c997]" : ""}`}
+                onClick={scrollToWhatIDo}
+              >
+                What I Do
+              </li>
+            </a>
+            <a href="#resume">
+              <li
+                className={`${
+                  activeMenuItem === "resume" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "resume" ? "text-[#20c997]" : ""}`}
+                onClick={scrollToResume}
+              >
+                Resume
+              </li>
+            </a>
+            <a href="#testimonial">
+              <li
+                className={`${
+                  activeMenuItem === "testimonial" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "testimonial" ? "text-[#20c997]" : ""}`}
+                onClick={scrollToTestimonial}
+              >
+                Testimonial
+              </li>
+            </a>
+            <a href="#concat">
+              <li
+                className={`${
+                  activeMenuItem === "concat" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                } ${activeSection === "concat" ? "text-[#20c997]" : ""}`}
+                onClick={scrollToConcat}
+              >
+                Contact
+              </li>
+            </a>
+          </div>
+        </div>
+        <div className="flex gap-4 opacity-50 justify-center m-24">
+          {socialIcons.map((item, index) => (
+            <a key={index} className={item.className} href={item.href}>
+              {item.icon}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
+  
+  
 }
