@@ -7,6 +7,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import FaxIcon from "@mui/icons-material/Fax";
 import EmailIcon from "@mui/icons-material/Email";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { Formik, Form, Field, isSubmitting } from "formik";
 
 export default function Contact({ id }) {
   return (
@@ -91,27 +92,49 @@ export default function Contact({ id }) {
         {/* سمت راست */}
         <div className="right xl:col-span-9 hidden xl:block xl:ml-10">
           <h1 className="text-xl font-medium">SEND US A NOTE</h1>
-          <div className="xl:flex xl:gap-5 mt-6">
-            <input
-              type="text"
-              placeholder="Name"
-              className="bg-[#191e22] w-full xl:w-[400px] h-11 rounded-lg mb-4 p-[15px] outline-none "
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="bg-[#191e22] w-full xl:w-[400px] h-11 rounded-lg mb-4 p-[15px] outline-none"
-            />
-          </div>
-          <textarea
-            className="bg-[#191e22] rounded-lg w-full xl:w-[820px] h-[150px] p-4 outline-none mt-5 "
-            placeholder="Tell us more about your needs..."
-          ></textarea>
 
-          <div className="flex justify-center mt-8">
-            <button className="bg-green-600 hover:bg-green-500 w-full xl:w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out">
-              Send Message
-            </button>
+          <div className="xl:flex xl:gap-5 mt-6">
+            <Formik
+              initialValues={{ name: "", email: "" }}
+              onSubmit={(values, {setSubmitting}) => {
+                console.log(values);
+                setTimeout(() => {
+                  setSubmitting(false)
+                }, 1000);
+              }}
+            >
+              {({isSubmitting}) => (
+                <Form>
+                  <Field
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    className="bg-[#191e22] w-full xl:w-[400px] h-11 rounded-lg mb-4 p-[15px] outline-none"
+                  />
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="bg-[#191e22] w-full xl:w-[400px] h-11 rounded-lg mb-4 p-[15px] outline-none ml-3"
+                  />
+                  <Field
+                    as="textarea"
+                    name="message"
+                    placeholder="Tell us more about your needs..."
+                    className="bg-[#191e22] rounded-lg w-full xl:w-[820px] h-[150px] p-4 outline-none mt-2"
+                  />
+                  <div className="flex justify-center mt-8">
+                    <button
+                      disabled={isSubmitting}
+                      type="submit"
+                      className="bg-green-600 hover:bg-green-500 w-full xl:w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out "
+                    >
+                      {isSubmitting ? "Loading..." : 'Send Message'}
+                    </button>
+                  </div>
+                </Form>
+              )}
+            </Formik>
           </div>
         </div>
       </div>

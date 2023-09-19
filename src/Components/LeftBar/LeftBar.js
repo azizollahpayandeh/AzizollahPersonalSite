@@ -6,52 +6,74 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import SmoothScroll from 'smooth-scroll';
+
 const name = "Azizollah Payandeh";
 
 const socialIcons = [
   {
-    icon: <a href="https://www.facebook.com/Azizollah%20Payandeh"><FacebookOutlinedIcon fontSize="small" /></a>,
+    icon: (
+      <a href="https://www.facebook.com/Azizollah%20Payandeh">
+        <FacebookOutlinedIcon fontSize="small" />
+      </a>
+    ),
     className: "p-[1px] cursor-pointer hover:text-blue-400",
   },
   {
-    icon: <a href="https://www.linkedin.com/in/azizollah-payandeh-70139b262/"><LinkedInIcon fontSize="small" /></a>,
+    icon: (
+      <a href="https://www.linkedin.com/in/azizollah-payandeh-70139b262/">
+        <LinkedInIcon fontSize="small" />
+      </a>
+    ),
     className: " cursor-pointer hover:text-blue-400",
-
   },
   {
-    icon: <a href="https://www.instagram.com/ars.alanpa"><InstagramIcon fontSize="small" /></a>,
+    icon: (
+      <a href="https://www.instagram.com/ars.alanpa">
+        <InstagramIcon fontSize="small" />
+      </a>
+    ),
     className: " cursor-pointer hover:text-red-400",
-
   },
   {
-    icon: <a href="https://github.com/azizollahpayandeh"><GitHubIcon fontSize="small" /></a>,
+    icon: (
+      <a href="https://github.com/azizollahpayandeh">
+        <GitHubIcon fontSize="small" />
+      </a>
+    ),
     className: " cursor-pointer hover:text-gray-600",
-
   },
   {
-    icon: <a href="https://t.me/azizollah010101"><TelegramIcon fontSize="small" /></a>,
+    icon: (
+      <a href="https://t.me/azizollah010101">
+        <TelegramIcon fontSize="small" />
+      </a>
+    ),
     className: " cursor-pointer hover:text-gray-600",
-
   },
+
 ];
 
+
 export default function LeftBar() {
+
+
+
+
 
   const [activeSection, setActiveSection] = useState(null);
   const [activeMenuItem, setActiveMenuItem] = useState(null);
 
-
   useEffect(() => {
     const handleScroll = () => {
-
       const aboutSection = document.getElementById("about");
       const whatIDoSection = document.getElementById("whatido");
       const resumeSection = document.getElementById("resume");
       const testimonialSection = document.getElementById("testimonial");
       const concatSection = document.getElementById("concat");
-  
+
       const yOffset = window.scrollY;
-  
+
       if (
         yOffset >= aboutSection.offsetTop &&
         yOffset < whatIDoSection.offsetTop
@@ -77,15 +99,29 @@ export default function LeftBar() {
       } else {
         setActiveSection(null);
       }
+
+      // اضافه کردن کد برای به‌روزرسانی activeMenuItem
+      if (activeSection === "about") {
+        setActiveMenuItem("about");
+      } else if (activeSection === "whatido") {
+        setActiveMenuItem("whatido");
+      } else if (activeSection === "resume") {
+        setActiveMenuItem("resume");
+      } else if (activeSection === "testimonial") {
+        setActiveMenuItem("testimonial");
+      } else if (activeSection === "concat") {
+        setActiveMenuItem("concat");
+      } else {
+        setActiveMenuItem("Home");
+      }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [activeSection]);
-  
 
   const scrollToAbout = () => {
     const sectionElement = document.getElementById("about");
@@ -96,7 +132,6 @@ export default function LeftBar() {
     }
     setActiveMenuItem("about");
   };
-
   const scrollToWhatIDo = () => {
     const sectionElement = document.getElementById("whatido");
     if (sectionElement) {
@@ -190,7 +225,7 @@ export default function LeftBar() {
 
   if (!showLeftBar) {
     return (
-      <div className="fixed  top-0 left-0 w-full bg-[#121212]  text-white p-4">
+      <div className="fixed  top-0 left-0 w-full bg-[#121212] z-50 text-white p-4">
         <div className="flex justify-between items-center">
           <h1 className="font-medium text-2xl ">{name}</h1>
           <div className="flex gap-2  -mr-17">
@@ -210,7 +245,7 @@ export default function LeftBar() {
         {showMenu && (
           <ul className="md:hidden mt-7">
             {menuItems.map((item, index) => (
-              <li key={index} className="mt-2">
+              <li key={index} className="mt-4">
                 <a href={item.link} className={item.className}>
                   {item.text}
                 </a>
@@ -241,7 +276,9 @@ export default function LeftBar() {
             <a href="#">
               <li
                 className={`${
-                  activeMenuItem === "Home" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "Home"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "Home" ? "text-[#20c997]" : ""}`}
                 onClick={() => setActiveMenuItem("Home")}
               >
@@ -251,7 +288,9 @@ export default function LeftBar() {
             <a href="#about">
               <li
                 className={`${
-                  activeMenuItem === "about" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "about"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "about" ? "text-[#20c997]" : ""}`}
                 onClick={scrollToAbout}
               >
@@ -261,7 +300,9 @@ export default function LeftBar() {
             <a href="#whatido">
               <li
                 className={`${
-                  activeMenuItem === "whatido" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "whatido"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "whatido" ? "text-[#20c997]" : ""}`}
                 onClick={scrollToWhatIDo}
               >
@@ -271,7 +312,9 @@ export default function LeftBar() {
             <a href="#resume">
               <li
                 className={`${
-                  activeMenuItem === "resume" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "resume"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "resume" ? "text-[#20c997]" : ""}`}
                 onClick={scrollToResume}
               >
@@ -281,7 +324,9 @@ export default function LeftBar() {
             <a href="#testimonial">
               <li
                 className={`${
-                  activeMenuItem === "testimonial" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "testimonial"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "testimonial" ? "text-[#20c997]" : ""}`}
                 onClick={scrollToTestimonial}
               >
@@ -291,7 +336,9 @@ export default function LeftBar() {
             <a href="#concat">
               <li
                 className={`${
-                  activeMenuItem === "concat" ? "text-[#20c997]" : "hover:text-[#20c997]"
+                  activeMenuItem === "concat"
+                    ? "text-[#20c997]"
+                    : "hover:text-[#20c997]"
                 } ${activeSection === "concat" ? "text-[#20c997]" : ""}`}
                 onClick={scrollToConcat}
               >
@@ -310,6 +357,4 @@ export default function LeftBar() {
       </div>
     </div>
   );
-  
-  
 }

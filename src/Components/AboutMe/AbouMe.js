@@ -82,22 +82,22 @@ export default function AboutMe({ id }) {
       </div>
 
       <div className="flex xl:justify-evenly flex-wrap xl:mt-20 mt-12 justify-center ">
-        <div className="flex flex-col text-center h-[140px] w-[250px] justify-center sm:mt-7 ">
+        <div className="flex flex-col text-center xl:h-[140px] h-[170px] xl:w-[250px] w-[200px] justify-center sm:mt-7 ">
           <h1 className="xl:text-[50px] opacity-50 -mt-5 text-6xl">2+</h1>
           <p className="mt-2 opacity-80">Years Experience</p>
         </div>
 
-        <div className="flex flex-col text-center h-[140px] w-[250px] justify-center sm:mt-7 ">
+        <div className="flex flex-col text-center xl:h-[140px] h-[170px] xl:w-[250px] w-[200px] justify-center sm:mt-7 ">
           <h1 className="xl:text-5xl opacity-50 text-6xl">10+</h1>
           <p className="mt-2 opacity-80">Happy Clients</p>
         </div>
 
-        <div className="flex flex-col text-center h-[140px] w-[250px] justify-center sm:mt-7 ">
+        <div className="flex flex-col text-center xl:h-[140px] h-[170px] xl:w-[250px] w-[200px] justify-center sm:mt-7 ">
           <h1 className="xl:text-5xl opacity-50 text-6xl">20+</h1>
           <p className="mt-2 opacity-80">Projects Done</p>
         </div>
 
-        <div className="flex flex-col text-center h-[140px] w-[250px] justify-center sm:mt-7 ">
+        <div className="flex flex-col text-center xl:h-[140px] h-[170px] xl:w-[250px] w-[200px] justify-center sm:mt-7 ">
           <h1 className="xl:text-5xl opacity-50 text-6xl ">5+</h1>
           <p className="mt-2 opacity-80">Awards Received</p>
         </div>
