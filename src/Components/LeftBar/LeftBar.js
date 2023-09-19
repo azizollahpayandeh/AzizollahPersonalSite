@@ -57,7 +57,10 @@ const socialIcons = [
 
 export default function LeftBar() {
 
-
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800,
+  speedAsDuration: true,
+});
 
 
 

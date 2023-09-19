@@ -10,6 +10,9 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import { Formik, Form, Field, isSubmitting } from "formik";
 
 export default function Contact({ id }) {
+  const clickHandeler = () => {
+    console.log("hello");
+  }
   return (
     <div className="bg-[#212529!important] xl:h-[95vh]" id={id}>
       <div className="flex-col justify-center items-center text-center flex">
@@ -125,6 +128,7 @@ export default function Contact({ id }) {
                   />
                   <div className="flex justify-center mt-8">
                     <button
+                    onClick={clickHandeler}
                       disabled={isSubmitting}
                       type="submit"
                       className="bg-green-600 hover:bg-green-500 w-full xl:w-[170px] h-[50px] rounded-3xl transition duration-300 ease-in-out "
