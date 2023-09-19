@@ -13,7 +13,7 @@ function InfoItem({ label, value }) {
 export default function AboutMe({ id }) {
   const handleDownloadClick = () => {
     const link = document.createElement("a");
-    link.href = "./file/AzizollahResume.pdf";
+    link.href = "./file/AzizollahResume.Fa.pdf";
     link.download = "AzizollahResume.pdf";
     link.style.display = "none";
     document.body.appendChild(link);
