@@ -261,7 +261,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     );
   }
 
-  const profileImageSrc = "./images/mee.jpg";
+  const profileImageSrc = "./images/write.png";
 
   return (
     <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left">
@@ -271,7 +271,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
             <img
               src={profileImageSrc}
               alt="profile"
-              className="rounded-[50%] border-8 w-40 h-40 border-zinc-800"
+              className="rounded-[50%] border-8 w-40 h-40"
             />
             <h1 className="text-lg mt-3 opacity-90">{name}</h1>
           </div>
