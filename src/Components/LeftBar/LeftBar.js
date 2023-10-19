@@ -11,14 +11,7 @@ import SmoothScroll from 'smooth-scroll';
 const name = "Azizollah Payandeh";
 
 const socialIcons = [
-  {
-    icon: (
-      <a href="https://www.facebook.com/Azizollah%20Payandeh">
-        <FacebookOutlinedIcon fontSize="small" />
-      </a>
-    ),
-    className: "p-[1px] cursor-pointer hover:text-blue-400",
-  },
+ 
   {
     icon: (
       <a href="https://www.linkedin.com/in/azizollah-payandeh-70139b262/">
