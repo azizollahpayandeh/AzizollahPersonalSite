@@ -1,12 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useEffect } from "react";
 import ClientBox from "../ClientBox/ClientBox";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { atom, useRecoilState, useRecoilValue } from "recoil";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function Client({ id }) {
-  const [isMobile, setIsMobile] = useState(false);
+
+  const isMobileState = atom({
+    key: "isMobileState",
+    default: false,
+  });
+
+  const [isMobile, setIsMobile] = useRecoilState(isMobileState)
+
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,16 +28,15 @@ export default function Client({ id }) {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setIsMobile]);
 
-  // اطلاعات دینامیک مشتریان را ایجاد کنید
   const clientData = [
     { name: "Dennis Jacques", img: "./images/client-sm-1.jpg", country: "User from USA", dec: "Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry." },
     { name: "Jay Shah", img: "./images/client-sm-2.jpg", country: "Founder at Icomatic Pvt Ltd", dec: "Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure." },
     { name: "Patrick Cary", img: "./images/client-sm-3.jpg", country: "Freelancer from USA", dec: "I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure." },
     { name: "Chris Tom", img: "./images/client-sm-4.jpg", country: "User from UK", dec: "Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry." },
   ];
-
+  
   const swiperElements = clientData.map((clientInfo, index) => (
     <SwiperSlide key={index}>
       <ClientBox clientInfo={clientInfo} />
@@ -59,3 +67,10 @@ export default function Client({ id }) {
     </div>
   );
 }
+
+
+
+
+
+
+
