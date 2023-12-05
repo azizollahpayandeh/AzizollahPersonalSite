@@ -109,7 +109,7 @@ export default function Contact({ id }) {
                 }
                 return errors;
               }}
-              onSubmit={(values, { setSubmitting, resetForm }) => {
+              onSu  bmit={(values, { setSubmitting, resetForm }) => {
                 console.log(values);
                 setTimeout(() => {
                   setSubmitting(false);
