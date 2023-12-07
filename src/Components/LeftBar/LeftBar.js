@@ -258,7 +258,7 @@ export default function LeftBar() {
   const profileImageSrc = "./images/write.png";
 
   return (
-    <div className="left-bar fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left">
+    <div className="left-bar hidden lg:block fixed top-0 bottom-0 bg-[#161616] text-white xl:w-[17%] w-[0%] float-left">
       <div className="all box flex flex-col justify-between">
         <div>
           <div className="flex flex-col items-center mt-7">
